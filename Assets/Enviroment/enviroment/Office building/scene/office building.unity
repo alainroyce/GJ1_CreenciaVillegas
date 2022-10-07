@@ -130,7 +130,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 4
+  serializedVersion: 3
   m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 1
@@ -143,7 +143,7 @@ LightingSettings:
   m_LightmapMaxSize: 1024
   m_BakeResolution: 40
   m_Padding: 2
-  m_LightmapCompression: 0
+  m_TextureCompression: 1
   m_AO: 0
   m_AOMaxDistance: 1
   m_CompAOExponent: 1
@@ -184,7 +184,6 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
-  m_PVRTiledBaking: 0
 --- !u!1 &287343885
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +238,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -283,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -293,9 +291,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &287343890
 MonoBehaviour:
@@ -524,7 +521,6 @@ Transform:
   m_LocalRotation: {x: 0.2840153, y: 0.95881975, z: -0, w: 0}
   m_LocalPosition: {x: 23.723854, y: 4.68524, z: 21.848652}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 582512557}
   m_RootOrder: 1
@@ -535,7 +531,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-493774
+  m_Name: pb_Mesh655202
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -740,6 +736,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54082758449534950, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 54300819140435956, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114944336420594386, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
+      propertyPath: door_in_use
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
 --- !u!1 &368333170
@@ -768,7 +776,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 86.10615, y: 19.55776, z: 49.652348}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1597817592}
   - {fileID: 1052431900}
@@ -832,7 +839,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -876,7 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -886,9 +892,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &459221053
 MonoBehaviour:
@@ -1117,7 +1122,6 @@ Transform:
   m_LocalRotation: {x: 0.2840153, y: 0.95881975, z: -0, w: 0}
   m_LocalPosition: {x: 23.723854, y: -8.81776, z: 21.848652}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 582512557}
   m_RootOrder: 3
@@ -1176,7 +1180,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1220,7 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -1230,9 +1233,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &482770374
 MonoBehaviour:
@@ -1461,7 +1463,6 @@ Transform:
   m_LocalRotation: {x: 0.309017, y: 0.95105654, z: -0, w: 0}
   m_LocalPosition: {x: 3.1088486, y: -4.2937603, z: 3.8706512}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 368333171}
   m_RootOrder: 3
@@ -1472,7 +1473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-473820
+  m_Name: pb_Mesh655254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1656,7 +1657,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 86.10615, y: 19.55776, z: 49.652348}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1215221093}
   - {fileID: 287343891}
@@ -1671,7 +1671,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-499438
+  m_Name: pb_Mesh655230
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1835,7 +1835,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-498466
+  m_Name: pb_Mesh655268
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2082,7 +2082,6 @@ Transform:
   m_LocalRotation: {x: 0.4087227, y: 0.23049074, z: -0.10747949, w: 0.87650895}
   m_LocalPosition: {x: 115.96837, y: 2.2859552, z: 66.901115}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2093,7 +2092,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-498912
+  m_Name: pb_Mesh655170
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2305,7 +2304,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2349,7 +2347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -2359,9 +2357,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &1052431899
 MonoBehaviour:
@@ -2590,7 +2587,6 @@ Transform:
   m_LocalRotation: {x: 0.309017, y: 0.95105654, z: -0, w: 0}
   m_LocalPosition: {x: 3.1088486, y: -17.70776, z: 3.8706512}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 368333171}
   m_RootOrder: 1
@@ -2649,7 +2645,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2693,7 +2688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -2703,9 +2698,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &1215221092
 MonoBehaviour:
@@ -2934,7 +2928,6 @@ Transform:
   m_LocalRotation: {x: 0.2840153, y: 0.95881975, z: -0, w: 0}
   m_LocalPosition: {x: 23.723854, y: 0.25623894, z: 21.848652}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 582512557}
   m_RootOrder: 0
@@ -2993,7 +2986,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3037,7 +3029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -3047,9 +3039,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &1305658965
 MonoBehaviour:
@@ -3278,7 +3269,6 @@ Transform:
   m_LocalRotation: {x: 0.309017, y: 0.95105654, z: -0, w: 0}
   m_LocalPosition: {x: 3.1088486, y: 0.20323944, z: 3.8706512}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 368333171}
   m_RootOrder: 4
@@ -3289,7 +3279,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-500408
+  m_Name: pb_Mesh655216
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3447,6 +3437,30 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1496514535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548018672611448, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
+  m_PrefabInstance: {fileID: 356326956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496514541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496514535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7954b3afdba044799272ef7bf5c206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDoors:
+  - Door: {fileID: 1496514535}
+    CloseValue: 0
+    OpenValue: 90
+    isDoorOpen: 0
+    RotationOrigin: {fileID: 1496514535}
+  door_in_use: 0
 --- !u!1 &1552010690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,7 +3513,6 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
   m_BakeLightProbesForTrees: 1
@@ -3520,7 +3533,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -3579,7 +3591,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3623,7 +3634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -3633,9 +3644,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &1597817591
 MonoBehaviour:
@@ -3864,7 +3874,6 @@ Transform:
   m_LocalRotation: {x: 0.309017, y: 0.95105654, z: -0, w: 0}
   m_LocalPosition: {x: 3.1088486, y: -13.29776, z: 3.8706512}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 368333171}
   m_RootOrder: 0
@@ -3923,7 +3932,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3967,7 +3975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -3977,9 +3985,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &1716925744
 MonoBehaviour:
@@ -4208,7 +4215,6 @@ Transform:
   m_LocalRotation: {x: 0.309017, y: 0.95105654, z: -0, w: 0}
   m_LocalPosition: {x: 3.1088486, y: -8.81976, z: 3.8706512}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 368333171}
   m_RootOrder: 2
@@ -4272,6 +4278,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: sprintCooldown
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: sprintDuration
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: hideBarWhenFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: unlimitedSprint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
@@ -4332,7 +4354,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4376,7 +4397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 3536265910408183816
+    id: 0
   m_Size: {x: 5, y: 0.016392002, z: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
@@ -4386,9 +4407,8 @@ MonoBehaviour:
     m_Center: {x: 0.5034027, y: -0.00042676926, z: 0.5}
     m_Extent: {x: 2.5, y: 0.008196001, z: 0.5}
   references:
-    version: 2
-    RefIds:
-    - rid: 3536265910408183816
+    version: 1
+    00000000:
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!114 &1796900627
 MonoBehaviour:
@@ -4617,7 +4637,6 @@ Transform:
   m_LocalRotation: {x: 0.2840153, y: 0.95881975, z: -0, w: 0}
   m_LocalPosition: {x: 23.723854, y: -4.3077602, z: 21.848652}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 582512557}
   m_RootOrder: 2
@@ -4628,7 +4647,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-504748
+  m_Name: pb_Mesh655284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4792,7 +4811,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-503816
+  m_Name: pb_Mesh655134
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4956,7 +4975,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-505820
+  m_Name: pb_Mesh655156
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
