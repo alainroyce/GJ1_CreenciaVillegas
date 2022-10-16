@@ -2,49 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickup : MonoBehaviour
+public class ItemPickup : Interactable
 {
-     public Items Item;
+    public Item item;
 
-    void Pickup()
+    public override void Interact()
     {
-        InventoryManager.Instance.Add(Item);
-        Destroy(gameObject);
+        base.Interact();
+
+        PickUp();
     }
 
-    void Update()
+    void PickUp()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            isPressed();
-            
-        }
-    }
-    void isPressed()
-    {
-        RaycastHit hit;
+        Debug.Log("Picking up " + item.name);
+        // Add to Inventory
+        bool wasPickedUp = Inventory.Instance.Add(item);
 
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit);
-        if (hit.collider.gameObject.tag == "Items")
-        {
-            Pickup();
-        }
-       
-        else if (hit.collider.gameObject.tag == "Cactus")
-        {
-            Pickup();
-        }
-
-
-       /* if (hit.transform.gameObject.tag == "Items")
-        {
-            Pickup();
-        }
-        if (hit.transform.gameObject.tag == "Cactus")
-        {
-            Pickup();
-        }*/
+        if (wasPickedUp)
+            Destroy(gameObject);
     }
 }
-
-

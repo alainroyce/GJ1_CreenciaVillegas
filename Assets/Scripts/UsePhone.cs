@@ -25,10 +25,7 @@ public class UsePhone : MonoBehaviour
         {
             isCamera();
         }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            isInventory();
-        }
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             hidePanel();
@@ -47,12 +44,12 @@ public class UsePhone : MonoBehaviour
     }
     void isInventory()
     {
-        InventoryPanel.SetActive(true);
+        
     }
     void hidePanel()
     {
         PhonePanel.SetActive(false);
         CameraPanel.SetActive(false);
-        InventoryPanel.SetActive(false);
+        
     }
 }

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ad3d09a0254154fbb677248c0ec4ee, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd9ce2ead65bd049a2ade6d89dfe7e9, type: 3}
   m_Name: Cactus
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: Cactus1
-  value: 10
+  name: Cactus
   icon: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
+  isDefaultItem: 0
