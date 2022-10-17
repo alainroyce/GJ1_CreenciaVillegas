@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfd9ce2ead65bd049a2ade6d89dfe7e9, type: 3}
-  m_Name: Cactus
+  m_Name: Paper
   m_EditorClassIdentifier: 
-  name: Cactus
-  icon: {fileID: 21300000, guid: 596b3c9c3a0095d4994ce04bef55863d, type: 3}
+  name: Papers
+  icon: {fileID: 21300000, guid: e2bc660708fcb7842a33da7fa9733b91, type: 3}
   isDefaultItem: 0

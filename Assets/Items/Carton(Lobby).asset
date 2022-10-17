@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Carton(Lobby)
   m_EditorClassIdentifier: 
   name: Carton
-  icon: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
+  icon: {fileID: 21300000, guid: 8e998ce4d6b543640af03c710d820caf, type: 3}
   isDefaultItem: 0
