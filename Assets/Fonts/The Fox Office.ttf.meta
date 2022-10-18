@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 282ff4193344ad248ba7015ee720a2ef
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - The Fox Office
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a00ab947f7b63b243a626795f0a76a0f, type: 3}
+  - {fileID: 12800000, guid: 8456491b55b61914b9f43327de73e15a, type: 3}
+  - {fileID: 12800000, guid: 1cd99320a7b521747b6250e1684b0489, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
