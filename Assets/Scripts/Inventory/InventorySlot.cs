@@ -11,6 +11,7 @@ public class InventorySlot : MonoBehaviour
     {
         item = newItem;
         icon.sprite = item.icon;
+
         icon.enabled = true;
         icon.name = item.name;
     }
