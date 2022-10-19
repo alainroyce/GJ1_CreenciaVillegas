@@ -30071,10 +30071,10 @@ RectTransform:
   - {fileID: 518893676}
   - {fileID: 389768967}
   - {fileID: 591551157}
+  - {fileID: 2132278121}
   - {fileID: 858532519}
   - {fileID: 1852035102}
   - {fileID: 1062085295}
-  - {fileID: 2132278121}
   - {fileID: 33834095}
   - {fileID: 1800216811}
   - {fileID: 665457518}
@@ -30542,6 +30542,12 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &618578812
 GameObject:
@@ -31912,7 +31918,7 @@ RectTransform:
   - {fileID: 1937916203}
   - {fileID: 150815060}
   m_Father: {fileID: 573759884}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32218,7 +32224,7 @@ Transform:
   - {fileID: 4893150248342258}
   - {fileID: 4995586016642007}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909311410
 GameObject:
@@ -32778,8 +32784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PhonePanel: {fileID: 1804727137}
-  CameraPanel: {fileID: 1397335272}
-  InventoryPanel: {fileID: 0}
 --- !u!114 &992921148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32888,7 +32892,7 @@ Transform:
   m_LocalScale: {x: 20, y: 20, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035167835 stripped
 GameObject:
@@ -32936,7 +32940,7 @@ RectTransform:
   - {fileID: 1806968054}
   - {fileID: 1736742457}
   m_Father: {fileID: 573759884}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -33868,7 +33872,7 @@ PrefabInstance:
     - target: {fileID: 7307546249938223984, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7307546249938223984, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
@@ -33929,6 +33933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: gravity
       value: -19.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307546249938223986, guid: eb531d67b999e454eb6d28ebfdc2c94c,
+        type: 3}
+      propertyPath: threshhold
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7307546249938223987, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
@@ -36668,7 +36677,7 @@ RectTransform:
   - {fileID: 1813337704}
   - {fileID: 477426917}
   m_Father: {fileID: 573759884}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37781,7 +37790,7 @@ RectTransform:
   - {fileID: 909311411}
   - {fileID: 1104135882}
   m_Father: {fileID: 573759884}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37888,7 +37897,7 @@ GameObject:
   m_Layer: 0
   m_Name: Keyboard (5F office)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -37908,6 +37917,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4637034405611529}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: f5ad434d4f337104cb13e905bc08490d, type: 2}
+  deactivate: {fileID: 1852035101}
 --- !u!1 &1288102226610916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1288102544659656, guid: e2e6970f9dbe45743858950d9b85475f,
@@ -37943,7 +37953,7 @@ GameObject:
   m_Layer: 0
   m_Name: PenHolder (2F Office Couch)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -37963,6 +37973,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4685705331062117}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: f8c40d391b4503b4b9c185ebb3c1bfd2, type: 2}
+  deactivate: {fileID: 62593255}
 --- !u!1 &1461442941345808
 GameObject:
   m_ObjectHideFlags: 0
@@ -37979,7 +37990,7 @@ GameObject:
   m_Layer: 0
   m_Name: Carton(Lobby)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -37999,6 +38010,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4575840264733512}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 31f866265757d6e46a77d3267d33d451, type: 2}
+  deactivate: {fileID: 1125756633}
 --- !u!1 &1476776199344493
 GameObject:
   m_ObjectHideFlags: 0
@@ -38015,7 +38027,7 @@ GameObject:
   m_Layer: 0
   m_Name: Paper (5F Couch)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38035,6 +38047,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4227852072333841}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 66a449aa74b03d541a9b5d2dd0f8a786, type: 2}
+  deactivate: {fileID: 1062085294}
 --- !u!1 &1507730926690758
 GameObject:
   m_ObjectHideFlags: 0
@@ -38051,7 +38064,7 @@ GameObject:
   m_Layer: 0
   m_Name: Monitor (5F Office Storage Room)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38071,6 +38084,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4893150248342258}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 018763a93a59f494fa8bd209b357521c, type: 2}
+  deactivate: {fileID: 1800216810}
 --- !u!1 &1519538842483947
 GameObject:
   m_ObjectHideFlags: 0
@@ -38087,7 +38101,7 @@ GameObject:
   m_Layer: 0
   m_Name: Folder(3F office rack)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38107,6 +38121,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4154602258691857}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 9e2ed228ce78ba44cab501f20dacb483, type: 2}
+  deactivate: {fileID: 190840524}
 --- !u!1 &1548018858536532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1548018672611448, guid: e2e6970f9dbe45743858950d9b85475f,
@@ -38129,7 +38144,7 @@ GameObject:
   m_Layer: 0
   m_Name: Telephone (2F 2nd Office (Table))
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38149,6 +38164,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4404561357939173}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: ff9a8f12e76f0314b870c8730f5c9198, type: 2}
+  deactivate: {fileID: 552321886}
 --- !u!1 &1687039038057669
 GameObject:
   m_ObjectHideFlags: 0
@@ -38165,7 +38181,7 @@ GameObject:
   m_Layer: 0
   m_Name: StorageBox (5F office floor storageBox)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38185,6 +38201,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4995586016642007}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 9d7540b27ccb0f04aba20fb29ad5b818, type: 2}
+  deactivate: {fileID: 665457517}
 --- !u!1 &1690714489103295
 GameObject:
   m_ObjectHideFlags: 0
@@ -38201,7 +38218,7 @@ GameObject:
   m_Layer: 0
   m_Name: PaperBox (3F CenterTable)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38221,6 +38238,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4657704927935717}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 3d0d4ff0a6b071b46bb252f7955378d4, type: 2}
+  deactivate: {fileID: 518893675}
 --- !u!1 &1733581208843085
 GameObject:
   m_ObjectHideFlags: 0
@@ -38237,7 +38255,7 @@ GameObject:
   m_Layer: 0
   m_Name: Printer (1F Storage Room)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38257,6 +38275,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4560318424695615}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 729c29b771a71dd4092512677bcff91c, type: 2}
+  deactivate: {fileID: 607086768}
 --- !u!1 &1740249307998199
 GameObject:
   m_ObjectHideFlags: 0
@@ -38273,7 +38292,7 @@ GameObject:
   m_Layer: 0
   m_Name: Filling Container (2F Tambayan)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38293,6 +38312,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4329315003895635}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 7ed44f35301cace41b95d454e2d69784, type: 2}
+  deactivate: {fileID: 1415724935}
 --- !u!1 &1801557370073951
 GameObject:
   m_ObjectHideFlags: 0
@@ -38309,7 +38329,7 @@ GameObject:
   m_Layer: 0
   m_Name: FileBoard(4F office couch)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38329,6 +38349,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4014903838685351}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: c4de0930addd244499d562c3d18146f6, type: 2}
+  deactivate: {fileID: 858532518}
 --- !u!1 &1860127800280862
 GameObject:
   m_ObjectHideFlags: 0
@@ -38345,7 +38366,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cactus (CR 3F)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38365,6 +38386,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4101112818098658}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 45ab88172f7065349ac64172b7dafb81, type: 2}
+  deactivate: {fileID: 335115714}
 --- !u!1 &1870802313730656
 GameObject:
   m_ObjectHideFlags: 0
@@ -38381,7 +38403,7 @@ GameObject:
   m_Layer: 0
   m_Name: Noteblock (5F office table)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38401,6 +38423,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4648984051962058}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 31579c198e6073746830b0ab80327037, type: 2}
+  deactivate: {fileID: 33834094}
 --- !u!1 &1921790354969126
 GameObject:
   m_ObjectHideFlags: 0
@@ -38417,7 +38440,7 @@ GameObject:
   m_Layer: 0
   m_Name: WaterBottle(3F First office table)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -38437,6 +38460,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4747985030436880}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: ebdea71a7d3810f408713695466737f8, type: 2}
+  deactivate: {fileID: 389768966}
 --- !u!4 &4014903838685351
 Transform:
   m_ObjectHideFlags: 0
@@ -39663,7 +39687,7 @@ GameObject:
   m_Layer: 0
   m_Name: Briefcase (3F lounge Couch)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39683,6 +39707,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 2506458636979900927}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 1ff52decd0069634497f23ac0e75b613, type: 2}
+  deactivate: {fileID: 294150717}
 --- !u!4 &2506458636979900927
 Transform:
   m_ObjectHideFlags: 0
@@ -39789,7 +39814,7 @@ GameObject:
   m_Layer: 0
   m_Name: Umbrella (3F Conference Room)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39809,6 +39834,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 5027343780013419427}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 46fc4c914951d2c45bd0c32af194868a, type: 2}
+  deactivate: {fileID: 1912276353}
 --- !u!23 &5335467918737927744
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39888,7 +39914,7 @@ GameObject:
   m_Layer: 0
   m_Name: Tablet (4F center table lounge)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39908,6 +39934,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 5356648539393999172}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 6db970313c03d7e4f88ef22a429c622d, type: 2}
+  deactivate: {fileID: 591551156}
 --- !u!65 &5381884645635583188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40000,7 +40027,7 @@ GameObject:
   m_Layer: 0
   m_Name: Laptop (2F #rd Office)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -40020,6 +40047,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 5932326297843432505}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 55f46ee384b266240aa52ede130d0fda, type: 2}
+  deactivate: {fileID: 1679382795}
 --- !u!65 &5961493320746167081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40187,7 +40215,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cellphone (4f Comfort Room)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -40207,6 +40235,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 6453561528670576903}
   player: {fileID: 1035167839}
   item: {fileID: 11400000, guid: 1dbc4c30794fd96449a25d971341386a, type: 2}
+  deactivate: {fileID: 2132278120}
 --- !u!4 &6453561528670576903
 Transform:
   m_ObjectHideFlags: 0

@@ -7,10 +7,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
     public static AudioManager instance;
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -33,15 +32,32 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.PLAY_SFX, this.PlaySFX);
+        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.STOP_SFX, this.StopSFX);
     }
 
     void Start()
     {
-        Play("BGM");
+        //Play("BGM");
     }
 
-    public void Play(string name)
+    private void OnDestroy()
     {
+        EventBroadcaster.Instance.RemoveAllObservers();
+    }
+
+    public void Play(string sfxName)
+    {
+        Parameters updateLineParams = new Parameters();
+        updateLineParams.PutExtra("SFX", sfxName);
+        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.PLAY_SFX, updateLineParams);
+    }
+
+    private void PlaySFX(Parameters param)
+    {
+        string name = param.GetStringExtra("SFX", "BGM");
+
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
@@ -49,5 +65,25 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void Stop(string sfxName)
+    {
+        Parameters updateLineParams = new Parameters();
+        updateLineParams.PutExtra("SFX", sfxName);
+        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.PLAY_SFX, updateLineParams);
+    }
+
+    private void StopSFX(Parameters param)
+    {
+        string name = param.GetStringExtra("SFX", "BGM");
+
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound file '" + name + "' not found!!");
+            return;
+        }
+        s.source.Stop();
     }
 }

@@ -5,8 +5,11 @@ using UnityEngine;
 public class UsePhone : MonoBehaviour
 {
     [SerializeField] GameObject PhonePanel;
-    [SerializeField] GameObject CameraPanel;
-    [SerializeField] GameObject InventoryPanel;
+
+    private void Awake()
+    {
+        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.TOGGLE_PHONE, this.CheckPhone);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,39 +20,25 @@ public class UsePhone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            isPressed();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            isCamera();
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            hidePanel();
-        }
-        
-
+        CheckPh();
     }
 
-    void isPressed()
+    private void OnDestroy()
     {
-        PhonePanel.SetActive(true);
+        EventBroadcaster.Instance.RemoveAllObservers();
     }
-    void isCamera()
+
+    public void CheckPh()
     {
-        CameraPanel.SetActive(true);
+        Parameters updateLineParams = new Parameters();
+        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.TOGGLE_PHONE);
     }
-    void isInventory()
+
+    private void CheckPhone()
     {
-        
-    }
-    void hidePanel()
-    {
-        PhonePanel.SetActive(false);
-        CameraPanel.SetActive(false);
-        
+        if (Input.GetButtonDown("Phone"))
+        {
+            PhonePanel.SetActive(!PhonePanel.activeSelf);
+        }
     }
 }

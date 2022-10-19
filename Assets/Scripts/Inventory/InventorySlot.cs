@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
- public Image icon;
+    public Image icon;
     public Text name;
     Item item;
 
@@ -11,7 +11,6 @@ public class InventorySlot : MonoBehaviour
     {
         item = newItem;
         icon.sprite = item.icon;
-
         icon.enabled = true;
         icon.name = item.name;
     }

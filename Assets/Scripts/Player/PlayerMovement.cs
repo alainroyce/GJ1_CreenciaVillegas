@@ -16,8 +16,71 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     public Camera cam;
 
+    private float ticks_interval = 0.0f;
+    public float threshhold = 2f;
+
+    private void Awake()
+    {
+        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.ON_INTERACT, this.InteractObject);
+        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.ON_MOVE, this.Walking);
+    }
+
     // Update is called once per frame
     void Update()
+    {
+        Walk();
+        Interact();
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveAllObservers();
+    }
+
+    public void Walk()
+    {
+        Parameters updateLineParams = new Parameters();
+        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.ON_MOVE);
+    }
+
+    private void Walking()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        controller.Move(move * speed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
+
+        ticks_interval++;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            if (ticks_interval >= threshhold)
+            {
+                Debug.Log("CHECKING");
+                AudioManager.instance.Play("Walk");
+                ticks_interval = 0;
+            }
+        }
+    }
+
+    public void Interact()
+    {
+        Parameters updateLineParams = new Parameters();
+        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.ON_INTERACT);
+    }
+
+    private void InteractObject()
     {
         if (Input.GetMouseButton(0))
         {
@@ -40,22 +103,5 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move * speed * Time.deltaTime);
-
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
     }
 }

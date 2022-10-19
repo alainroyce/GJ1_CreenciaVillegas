@@ -9,6 +9,11 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.TOGGLE_INVENTORY, this.CheckInventory);
+    }
+
     void Start()
     {
         inventory = Inventory.Instance;
@@ -19,6 +24,22 @@ public class InventoryUI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        CheckInv();
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveAllObservers();
+    }
+
+    public void CheckInv()
+    {
+        Parameters updateLineParams = new Parameters();
+        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.TOGGLE_INVENTORY);
+    }
+
+    private void CheckInventory()
     {
         if (Input.GetButtonDown("Inventory"))
         {

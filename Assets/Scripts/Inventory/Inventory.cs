@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
-    public bool Add(Item item)
+    public bool Add(Item item, GameObject deactivate)
     {
         if (!item.isDefaultItem)
         {
@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
                 return false;
             }
             items.Add(item);
+            deactivate.SetActive(false);
 
             if (onItemChangedCallback != null)
                 onItemChangedCallback.Invoke();
