@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController controller;
-    public float speed = 12f;
-    public float gravity = -9.81f;
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private float speed = 12f;
+    [SerializeField] private float gravity = -9.81f;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private LayerMask groundMask;
+
+    [SerializeField] private Camera cam;
+
+    [SerializeField] private float ticks_interval = 0.0f;
+    [SerializeField] private float threshhold = 2f;
 
     Vector3 velocity;
     bool isGrounded;
-    public Camera cam;
-
-    private float ticks_interval = 0.0f;
-    public float threshhold = 2f;
 
     private void Awake()
     {
@@ -67,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ticks_interval >= threshhold)
             {
-                Debug.Log("CHECKING");
                 AudioManager.instance.Play("Walk");
                 ticks_interval = 0;
             }

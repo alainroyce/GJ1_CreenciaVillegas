@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class UsePhone : MonoBehaviour
 {
-    [SerializeField] GameObject PhonePanel;
+    [SerializeField] private Animator animator;
+
+    bool isActive = false;
 
     private void Awake()
     {
@@ -14,7 +16,7 @@ public class UsePhone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhonePanel.SetActive(false);
+        animator.SetBool("isActive", isActive);
     }
 
     // Update is called once per frame
@@ -38,7 +40,8 @@ public class UsePhone : MonoBehaviour
     {
         if (Input.GetButtonDown("Phone"))
         {
-            PhonePanel.SetActive(!PhonePanel.activeSelf);
+            isActive = !isActive;
+            animator.SetBool("isActive", isActive);
         }
     }
 }

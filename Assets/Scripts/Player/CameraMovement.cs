@@ -5,9 +5,10 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
 
-    public float mouseSensitivity = 400f;
-    public Transform playerBody;
+    [SerializeField] private float mouseSensitivity = 400f;
+    [SerializeField] private Transform playerBody;
     float xRotation = 0f;
+
     // Start is called before the first frame update
     void Start()
     {

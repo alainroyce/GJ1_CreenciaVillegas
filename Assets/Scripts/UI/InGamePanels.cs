@@ -6,10 +6,6 @@ public class InGamePanels : MonoBehaviour
 {
     [SerializeField] private GameObject WinPanel;
 
-    void Start()
-    {
-        
-    }
     private void Update()
     {
         if(Inventory.Instance.items.Count == 1)

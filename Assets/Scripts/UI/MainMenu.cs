@@ -6,7 +6,6 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject Panel;
 
-
     private void Start()
     {
         Panel.SetActive(false);
@@ -25,6 +24,4 @@ public class MainMenu : MonoBehaviour
     {
         Panel.SetActive(false);
     }
-
-
 }
