@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     public int space = 20;
 
     public List<Item> items = new List<Item>();
-
+    
     public bool Add(Item item, GameObject deactivate)
     {
         if (!item.isDefaultItem)
@@ -43,7 +43,10 @@ public class Inventory : MonoBehaviour
         }
         return true;
     }
-
+    private void Update()
+    {
+        
+    }
     public void Remove(Item item)
     {
         items.Remove(item);
