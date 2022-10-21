@@ -30,7 +30,6 @@ public class InventoryUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("Removing All Observers");
         EventBroadcaster.Instance.RemoveAllObservers();
     }
 

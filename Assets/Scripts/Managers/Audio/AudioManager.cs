@@ -32,9 +32,6 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-
-        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.PLAY_SFX, this.PlaySFX);
-        EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.STOP_SFX, this.StopSFX);
     }
 
     void Start()
@@ -42,23 +39,8 @@ public class AudioManager : MonoBehaviour
         Play("BGM");
     }
 
-    private void OnDestroy()
+    public void Play(string name)
     {
-        Debug.Log("Removing All Observers FROM AUDIO MANAGER");
-        EventBroadcaster.Instance.RemoveAllObservers();
-    }
-
-    public void Play(string sfxName)
-    {
-        Parameters updateLineParams = new Parameters();
-        updateLineParams.PutExtra("SFX", sfxName);
-        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.PLAY_SFX, updateLineParams);
-    }
-
-    private void PlaySFX(Parameters param)
-    {
-        string name = param.GetStringExtra("SFX", "BGM");
-
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
@@ -68,17 +50,8 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void Stop(string sfxName)
+    public void Stop(string name)
     {
-        Parameters updateLineParams = new Parameters();
-        updateLineParams.PutExtra("SFX", sfxName);
-        EventBroadcaster.Instance.PostEvent(EventNames.GJ1_Events.PLAY_SFX, updateLineParams);
-    }
-
-    private void StopSFX(Parameters param)
-    {
-        string name = param.GetStringExtra("SFX", "BGM");
-
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {

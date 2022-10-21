@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        EventBroadcaster.Instance.PrintObservers();
         Panel.SetActive(false);
     }
     

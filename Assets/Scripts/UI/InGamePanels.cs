@@ -8,9 +8,8 @@ public class InGamePanels : MonoBehaviour
     [SerializeField] private GameObject WinPanel;
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private Text textBox;
-    private float timeStart = 10;
-    private float timer;
-    public bool isGameOver = false;
+    [SerializeField] private float timeStart = 480;
+    [SerializeField] private float timer;
 
     void Start()
     {
@@ -21,44 +20,43 @@ public class InGamePanels : MonoBehaviour
 
     private void Update()
     {
-        if (!isGameOver)
-        {
-            timer -= Time.deltaTime;
-            textBox.text = Mathf.Round(timer).ToString();
+        timer -= Time.deltaTime;
+        textBox.text = Mathf.Round(timer).ToString();
 
-            if (Inventory.Instance.items.Count == 1)
-            {
-                isWin();
-                isGameOver = true;
-            }
-            else if (timer <= 0)
-            {
-                isLose();
-                isGameOver = true;
-            }
+        if (Inventory.Instance.items.Count == 20)
+        {
+            isWin();
+        }
+        else if (timer <= 0)
+        {
+            isLose();
         }
     }
 
     private void isWin()
     {
         WinPanel.SetActive(true);
+        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
     }
 
     private void isLose()
     {
         LosePanel.SetActive(true);
+        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
     }
 
     public void isMainMenuPressed()
     {
         Inventory.Instance.ClearInventory();
+        Time.timeScale = 1;
         LoadManager.Instance.LoadScene("MainMenu");
     }
     public void isRestartPressed()
     {
         Inventory.Instance.ClearInventory();
+        Time.timeScale = 1;
         LoadManager.Instance.LoadScene("GameScene");
     }
 }

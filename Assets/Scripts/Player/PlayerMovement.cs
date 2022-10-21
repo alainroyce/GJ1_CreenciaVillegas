@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("Removing All Observers");
         EventBroadcaster.Instance.RemoveAllObservers();
     }
 

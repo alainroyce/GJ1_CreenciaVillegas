@@ -34017,7 +34017,8 @@ MonoBehaviour:
   WinPanel: {fileID: 1611747192}
   LosePanel: {fileID: 1258558143}
   textBox: {fileID: 390453695}
-  isGameOver: 0
+  timeStart: 480
+  timer: 0
 --- !u!1 &1020976184
 GameObject:
   m_ObjectHideFlags: 0
@@ -35714,7 +35715,7 @@ PrefabInstance:
     - target: {fileID: 7307546249938223984, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.914
+      value: 87.07
       objectReference: {fileID: 0}
     - target: {fileID: 7307546249938223984, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
@@ -35724,7 +35725,7 @@ PrefabInstance:
     - target: {fileID: 7307546249938223984, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.948
+      value: 46.233
       objectReference: {fileID: 0}
     - target: {fileID: 7307546249938223984, guid: eb531d67b999e454eb6d28ebfdc2c94c,
         type: 3}
