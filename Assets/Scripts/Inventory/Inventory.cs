@@ -43,10 +43,6 @@ public class Inventory : MonoBehaviour
         }
         return true;
     }
-    private void Update()
-    {
-        
-    }
     public void Remove(Item item)
     {
         items.Remove(item);
@@ -55,5 +51,8 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
-
+    public void ClearInventory()
+    {
+        items.Clear();
+    }
 }
