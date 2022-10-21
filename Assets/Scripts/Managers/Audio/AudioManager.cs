@@ -39,11 +39,12 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        //Play("BGM");
+        Play("BGM");
     }
 
     private void OnDestroy()
     {
+        Debug.Log("Removing All Observers FROM AUDIO MANAGER");
         EventBroadcaster.Instance.RemoveAllObservers();
     }
 

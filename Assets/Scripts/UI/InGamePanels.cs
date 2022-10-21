@@ -14,9 +14,7 @@ public class InGamePanels : MonoBehaviour
 
     void Start()
     {
-        WinPanel.SetActive(false);
-        LosePanel.SetActive(false);
-        isGameOver = false;
+        EventBroadcaster.Instance.PrintObservers();
         textBox.text = timeStart.ToString();
         timer = timeStart;
     }

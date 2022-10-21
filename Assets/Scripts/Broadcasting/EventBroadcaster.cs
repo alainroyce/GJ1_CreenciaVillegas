@@ -15,7 +15,8 @@ public class EventBroadcaster {
 
 	public static EventBroadcaster Instance {
 		get {
-			if(sharedInstance == null) {
+
+			if (sharedInstance == null) {
 				sharedInstance = new EventBroadcaster();
 			}
 
