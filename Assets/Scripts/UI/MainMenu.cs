@@ -24,4 +24,8 @@ public class MainMenu : MonoBehaviour
     {
         Panel.SetActive(false);
     }
+    public void isQuitPressed()
+    {
+        Application.Quit();
+    }
 }
