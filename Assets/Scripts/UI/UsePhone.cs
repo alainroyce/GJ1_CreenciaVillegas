@@ -10,11 +10,6 @@ public class UsePhone : MonoBehaviour
     private void Awake()
     {
         EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.TOGGLE_PHONE, this.CheckPhone);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         animator.SetBool("isActive", isActive);
     }
 

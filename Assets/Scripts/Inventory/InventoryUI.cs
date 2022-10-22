@@ -15,6 +15,7 @@ public class InventoryUI : MonoBehaviour
     private void Awake()
     {
         EventBroadcaster.Instance.AddObserver(EventNames.GJ1_Events.TOGGLE_INVENTORY, this.CheckInventory);
+        animator.SetBool("isActive", isActive);
     }
 
     void Start()
@@ -23,8 +24,6 @@ public class InventoryUI : MonoBehaviour
         inventory.onItemChangedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-
-        animator.SetBool("isActive", isActive);
     }
 
     // Update is called once per frame
@@ -48,7 +47,6 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            Debug.Log("Inventory button check");
             isActive = !isActive;
             animator.SetBool("isActive", isActive);
         }
@@ -57,7 +55,7 @@ public class InventoryUI : MonoBehaviour
     void UpdateUI()
     {
         Debug.Log("Updating UI");
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if(i <inventory.items.Count)
             {

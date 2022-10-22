@@ -43,17 +43,17 @@ public class InGamePanels : MonoBehaviour
     private void isWin()
     {
         WinPanel.SetActive(true);
-        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         AudioManager.instance.Play("win");
+        Time.timeScale = 0;
     }
 
     private void isLose()
     {
         LosePanel.SetActive(true);
-        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         AudioManager.instance.Play("lose");
+        Time.timeScale = 0;
     }
 
     public void isMainMenuPressed()
