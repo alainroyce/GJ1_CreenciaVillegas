@@ -28,7 +28,7 @@ public class InGamePanels : MonoBehaviour
         timer -= Time.deltaTime;
         textBox.text = Mathf.Round(timer).ToString();
 
-        if (Inventory.Instance.items.Count == 1)
+        if (Inventory.Instance.items.Count == 20)
         {
             isWin();
             
