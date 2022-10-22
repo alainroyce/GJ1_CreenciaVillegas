@@ -11,9 +11,14 @@ public class InGamePanels : MonoBehaviour
     [SerializeField] private float timeStart = 480;
     [SerializeField] private float timer;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+        EventBroadcaster.Instance.PrintObservers();
+    }
+
     void Start()
     {
-        EventBroadcaster.Instance.PrintObservers();
         textBox.text = timeStart.ToString();
         timer = timeStart;
     }
@@ -50,13 +55,11 @@ public class InGamePanels : MonoBehaviour
     public void isMainMenuPressed()
     {
         Inventory.Instance.ClearInventory();
-        Time.timeScale = 1;
         LoadManager.Instance.LoadScene("MainMenu");
     }
     public void isRestartPressed()
     {
         Inventory.Instance.ClearInventory();
-        Time.timeScale = 1;
         LoadManager.Instance.LoadScene("GameScene");
     }
 }
