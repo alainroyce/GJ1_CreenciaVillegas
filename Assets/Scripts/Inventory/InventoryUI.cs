@@ -3,11 +3,14 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
   
 {
+    [SerializeField] private Animator animator;
+    bool isActive = false;
+
     public Transform itemsParent;
     public GameObject inventoryUI;
     Inventory inventory;
-
     InventorySlot[] slots;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -20,6 +23,8 @@ public class InventoryUI : MonoBehaviour
         inventory.onItemChangedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+
+        animator.SetBool("isActive", isActive);
     }
 
     // Update is called once per frame
@@ -43,7 +48,9 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            Debug.Log("Inventory button check");
+            isActive = !isActive;
+            animator.SetBool("isActive", isActive);
         }
     }
 

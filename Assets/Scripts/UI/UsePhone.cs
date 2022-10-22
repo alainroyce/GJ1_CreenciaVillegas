@@ -5,7 +5,6 @@ using UnityEngine;
 public class UsePhone : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-
     bool isActive = false;
 
     private void Awake()
@@ -38,7 +37,7 @@ public class UsePhone : MonoBehaviour
 
     private void CheckPhone()
     {
-        if (Input.GetButtonDown("Phone"))
+        if (Input.GetButtonDown("Tablet"))
         {
             isActive = !isActive;
             animator.SetBool("isActive", isActive);

@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         ticks_interval++;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
+            Debug.Log("Movement check");
             if (ticks_interval >= threshhold)
             {
                 AudioManager.instance.Play("Walk");
