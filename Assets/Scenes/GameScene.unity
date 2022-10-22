@@ -31291,6 +31291,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Pickup
+    clip: {fileID: 8300000, guid: a71df31b2d1fbae4d930d1dd6f29c850, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: win
+    clip: {fileID: 8300000, guid: 4ec808a397993be4b9d923fe9af8279f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: lose
+    clip: {fileID: 8300000, guid: 16a8f9bc029488f42aa51b3fd8cc4fbc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &618578812
 GameObject:
   m_ObjectHideFlags: 0

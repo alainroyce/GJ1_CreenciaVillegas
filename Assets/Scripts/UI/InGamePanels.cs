@@ -28,13 +28,15 @@ public class InGamePanels : MonoBehaviour
         timer -= Time.deltaTime;
         textBox.text = Mathf.Round(timer).ToString();
 
-        if (Inventory.Instance.items.Count == 20)
+        if (Inventory.Instance.items.Count == 1)
         {
             isWin();
+            
         }
         else if (timer <= 0)
         {
             isLose();
+           
         }
     }
 
@@ -43,6 +45,7 @@ public class InGamePanels : MonoBehaviour
         WinPanel.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
+        AudioManager.instance.Play("win");
     }
 
     private void isLose()
@@ -50,6 +53,7 @@ public class InGamePanels : MonoBehaviour
         LosePanel.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
+        AudioManager.instance.Play("lose");
     }
 
     public void isMainMenuPressed()
